@@ -15,7 +15,8 @@
   <h1 class="display-1">Jacob Morrow</h1>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
@@ -24,7 +25,7 @@
           <a class="nav-link" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"href="projects.html">Projects</a>
+          <a class="nav-link" href="projects.html">Projects</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="experience.html">Experience</a>
@@ -36,13 +37,12 @@
       </ul>
     </div>
   </nav>
-  
+
   <div class="container">
     <div class="jumbotron">
-      <h2 class="display-6">Portfolio Website</h2> 
+      <h2 class="display-6">Portfolio Website</h2>
       <p class="lead">Using HTML+CSS, JavaScript, Bootstrap.</p>
     </div>
-    <p class="lead">Winter 2021</p>
   </div>
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -52,24 +52,38 @@
         aria-label="Slide 2"></button>
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
         aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+        aria-label="Slide 4"></button>
     </div>
     <div class="carousel-inner">
       <!--Set delay time for carousel to 45 sec-->
       <div class="carousel-item active" data-bs-interval="45">
+        <!--add image to carousel-->
         <img src="imgs/focus_src.png" class="d-block w-100" alt="Source code from Focus written in Python">
       </div>
       <div class="carousel-item">
+        <!--add image to carousel-->
         <img src="imgs/hp_src.png" class="d-block w-100" alt="Source code from Harry Potter Analysis written in Python">
       </div>
+
       <div class="carousel-item">
+        <!--add image to carousel-->
+        <img src="imgs/IO_src.png" class="d-block w-100" alt="Source code from Low Level IO written in MASM Assembly">
+      </div>
+
+      <div class="carousel-item">
+        <!--add image to carousel-->
         <img src="imgs/this_src.png" class="d-block w-100" alt="Source code from this very page written in HTML">
       </div>
+
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
@@ -79,7 +93,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
-
+  <div class="d-flex justify-content-center">
+    <p class="lead">Winter 2021</p>
+  </div>
 </body>
 
 </html>

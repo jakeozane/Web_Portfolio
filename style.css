@@ -7,12 +7,13 @@
     height: 70rem;
   }
   .carousel-item > img {
-    position: absolute;
+    position: middle;
     top: 0;
     left: 0;
-    min-width: 100%;
+    
+    object-fit: contain;
     height: 70rem;
   }
 
 body {background-color: #eceff4;
-      color: #2e3440}
+      color: #2e3440;}
