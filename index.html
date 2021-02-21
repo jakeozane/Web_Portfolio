@@ -2,13 +2,15 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Home</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
 
-  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" title="Cool stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -41,17 +43,48 @@
   <div class="container">
     <div class="jumbotron">
       <h2 class="display-6">Portfolio Website</h2>
-      <p class="lead">Using HTML+CSS, JavaScript, Bootstrap.</p>
+      <p class="lead">Built to be dynamic and responsive using</p>
+      <div class="row">
+        <div class="col">
+          <div class="card" style="width: 10rem">
+            <img class="card-img-top" src="imgs/html5.png" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">HTML+CSS</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 10rem">
+            <img class="card-img-top" src="imgs/js.png" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">JavaScript</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" style="width: 10rem">
+            <img class="card-img-top" src="imgs/bootstrap.png" alt="Card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">Bootstrap</h5>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
+      <!--button for first image in carousel -->
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
         aria-current="true" aria-label="Slide 1"></button>
+      <!--button for second image in carousel-->
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
         aria-label="Slide 2"></button>
+      <!--button for third image in carousel-->
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
         aria-label="Slide 3"></button>
+      <!--button for fourth image in carousel-->
       <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
         aria-label="Slide 4"></button>
     </div>
@@ -59,37 +92,48 @@
       <!--Set delay time for carousel to 45 sec-->
       <div class="carousel-item active" data-bs-interval="45">
         <!--add image to carousel-->
-        <img src="imgs/focus_src.png" class="d-block w-100" alt="Source code from Focus written in Python">
+        <img src="imgs/focus_src.png" class="d-block w-100" alt="Source code from Focus written in Python" />
       </div>
       <div class="carousel-item">
         <!--add image to carousel-->
-        <img src="imgs/hp_src.png" class="d-block w-100" alt="Source code from Harry Potter Analysis written in Python">
+        <img src="imgs/hp_src.png" class="d-block w-100"
+          alt="Source code from Harry Potter Analysis written in Python" />
       </div>
 
       <div class="carousel-item">
         <!--add image to carousel-->
-        <img src="imgs/IO_src.png" class="d-block w-100" alt="Source code from Low Level IO written in MASM Assembly">
+        <img src="imgs/IO_src.png" class="d-block w-100" alt="Source code from Low Level IO written in MASM Assembly" />
       </div>
 
       <div class="carousel-item">
         <!--add image to carousel-->
-        <img src="imgs/this_src.png" class="d-block w-100" alt="Source code from this very page written in HTML">
+        <img src="imgs/this_src.png" class="d-block w-100" alt="Source code from this very page written in HTML" />
       </div>
-
     </div>
+    <!--button for left arrow in carousel-->
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
       data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
     </button>
+    <!--button for right arrow in carousel-->
     <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
       data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
   </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+  </script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
