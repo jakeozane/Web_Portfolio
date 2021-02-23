@@ -1,20 +1,21 @@
 .carousel {
-    margin-bottom: 4rem;
-  }
-  
-  /* Declare heights because of positioning of img element */
-  .carousel-item {
-    height: 70rem;
-  }
-  .carousel-item > img {
-    position: middle;
-    top: 0;
-    left: 0;
-    
-    object-fit: contain;
-    height: 70rem;
-  }
+  margin-bottom: 4rem;
+}
 
-body {background-color: #eceff4;
-      color: #2e3440;
-      font-family: 'Roboto', sans-serif;}
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 70rem;
+}
+
+.carousel-item>img {
+  position: middle;
+  top: 0;
+  left: 0;
+
+  object-fit: contain;
+  height: 70rem;
+}
+
+h1 {
+  padding-left: 1rem;
+}
