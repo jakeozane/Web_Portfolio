@@ -7,7 +7,7 @@ function bindEmail() {
         email: null
     };
     payload.email = document.getElementById('email').value;
-    req.open('POST', 'http://web.engr.oregonstate.edu/~zhangluy/tools/class-content/form_tests/check_request.php', true);
+    req.open('POST', 'https://reqbin.com/echo/post/json', true);
     req.setRequestHeader('Content-Type', 'application/json');
     req.addEventListener('load', function(){
         if (req.status >= 200 && req.status < 400) {
