@@ -69,3 +69,17 @@ h1 {
 .site-footer a:hover {
   text-decoration: underline;
 }
+
+.cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin: 1rem 0 1.5rem;
+  border-radius: 0.5rem;
+  background-color: var(--nord6);
+  border-left: 4px solid var(--nord8);
+  color: var(--nord0);
+}
