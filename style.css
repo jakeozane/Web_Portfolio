@@ -1,21 +1,3 @@
-.carousel {
-  margin-bottom: 4rem;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel-item {
-  height: 70rem;
-}
-
-.carousel-item>img {
-  position: middle;
-  top: 0;
-  left: 0;
-
-  object-fit: contain;
-  height: 70rem;
-}
-
 h1 {
   padding-left: 1rem;
 }
