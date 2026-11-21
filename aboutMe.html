@@ -66,20 +66,19 @@
         shapes how I work: I try to understand both the system and the person on the other end of the ticket.</p>
       <p class="lead">Outside of work, I'm into computer hardware. I built my own PC and spend time tuning my Ender 3
         3D printer.</p>
-      <p class="lead">
-        <a id="contact-email" href="#" data-u="Morrow98J" data-d="gmail.com">Morrow98J [at] gmail [dot] com</a> &middot;
-        <a href="https://github.com/jakeozane">github.com/jakeozane</a> &middot;
-        <a href="resume.pdf" download="resumeMorrow">Resume (PDF)</a>
-      </p>
     </div>
   </main>
   <br>
   
 
   <br>
-  <div class="d-flex justify-content-center">
-    <p class="lead">Updated 2026</p>
-  </div>
+  <footer class="site-footer">
+    <a id="contact-email" href="#" data-u="Morrow98J" data-d="gmail.com">Morrow98J [at] gmail [dot] com</a>
+    <span class="sep">&middot;</span>
+    <a href="https://github.com/jakeozane">GitHub</a>
+    <span class="sep">&middot;</span>
+    <a href="resume.pdf" download="resumeMorrow">Resume (PDF)</a>
+  </footer>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
   </script>
@@ -96,16 +95,7 @@
     integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous">
   </script>
 
-  <script>
-    // Assemble the email address at runtime so it isn't in the HTML for scrapers.
-    (function () {
-      var a = document.getElementById('contact-email');
-      if (!a) return;
-      var addr = a.getAttribute('data-u') + '@' + a.getAttribute('data-d');
-      a.href = 'mailto:' + addr;
-      a.textContent = addr;
-    })();
-  </script>
+  <script src="footer.js"></script>
 </body>
 
 </html>
