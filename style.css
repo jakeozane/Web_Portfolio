@@ -19,3 +19,33 @@
 h1 {
   padding-left: 1rem;
 }
+
+/* Nord palette */
+:root {
+  --nord0: #2e3440;
+  --nord3: #4c566a;
+  --nord4: #d8dee9;
+  --nord6: #eceff4;
+  --nord8: #88c0d0;
+  --nord10: #5e81ac;
+}
+
+.intro {
+  padding: 2rem 0 1rem;
+}
+
+.skill-group {
+  color: var(--nord3);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 1rem;
+  background-color: var(--nord6);
+  border: 1px solid var(--nord4);
+  color: var(--nord0);
+  font-size: 0.9rem;
+}
