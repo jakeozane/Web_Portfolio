@@ -31,6 +31,16 @@
   --btn-bg: var(--nord0);
   --btn-bg-hover: var(--nord2);
   --btn-text: var(--nord6);
+  /* Incident log panel (darker Nord hues so small text passes WCAG AA) */
+  --log-bg: #f8f9fb;
+  --log-border: var(--nord4);
+  --log-text: var(--nord0);
+  --log-muted: var(--nord3);
+  --log-time: var(--nord3);
+  --log-red: #a3444d;
+  --log-yellow: #8a6a1e;
+  --log-frost: #3f6a99;
+  --log-green: #55703f;
   color-scheme: light;
 }
 
@@ -46,6 +56,15 @@
   --btn-bg-hover: var(--nord7);
   --btn-text: var(--nord0);
   --text-muted: #a3acbd;   /* softer than nord4 for labels, still AA on nord0 */
+  --log-bg: #272c36;
+  --log-border: var(--nord2);
+  --log-text: var(--nord6);
+  --log-muted: #a3acbd;
+  --log-time: #959eae;
+  --log-red: #da838b;
+  --log-yellow: var(--nord13);
+  --log-frost: var(--nord8);
+  --log-green: var(--nord14);
   color-scheme: dark;
 }
 
@@ -373,25 +392,25 @@ h1, h2, h3 {
   color: var(--accent);
 }
 
-/* Incident log: always dark, like a terminal, in both themes */
+/* Incident log: follows the light/dark theme */
 .log-figure {
   margin: 0;
 }
 
 .log {
   overflow: hidden;
-  border: 1px solid var(--nord2);
+  border: 1px solid var(--log-border);
   border-radius: 0.5rem;
-  background-color: #272c36;
-  color: var(--nord6);
+  background-color: var(--log-bg);
+  color: var(--log-text);
 }
 
 .log-bar {
   display: flex;
   justify-content: space-between;
   padding: 0.7rem 1rem;
-  border-bottom: 1px solid var(--nord2);
-  color: #a3acbd;
+  border-bottom: 1px solid var(--log-border);
+  color: var(--log-muted);
   font-size: 0.85rem;
 }
 
@@ -408,11 +427,11 @@ h1, h2, h3 {
   gap: 0.5rem;
 }
 
-.log .t { color: #7b8496; }
-.log .k-alert { color: var(--nord11); }
-.log .k-look { color: var(--nord13); }
-.log .k-fix { color: var(--nord8); }
-.log .k-done { color: var(--nord14); }
+.log .t { color: var(--log-time); }
+.log .k-alert { color: var(--log-red); }
+.log .k-look { color: var(--log-yellow); }
+.log .k-fix { color: var(--log-frost); }
+.log .k-done { color: var(--log-green); }
 
 @media (prefers-reduced-motion: no-preference) {
   .log li {
