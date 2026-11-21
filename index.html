@@ -8,7 +8,7 @@
   <title>Home</title>
   <link rel="canonical" href="https://jakeozane.github.io/Web_Portfolio/">
   <link rel="preconnect" href="https://fonts.gstatic.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Fira+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
 
@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body data-view="plain">
   <header class="site-header">
     <nav class="navbar navbar-expand-md navbar-light">
       <div class="container page-width">
@@ -59,67 +59,119 @@
     </nav>
   </header>
 
-  <main class="container page-width py-4">
-    <section class="intro">
-      <h1 class="section-title">Senior Support Engineer</h1>
-      <p class="lead">5+ years troubleshooting enterprise SaaS platforms: debugging client-configured logic,
-        resolving relational database issues, and keeping cloud and bare-metal Linux production environments
-        reliable. I partner closely with engineering teams and mentor the engineers around me.</p>
-    </section>
-
-    <h2 class="section-title">Skills</h2>
-    <div class="row mt-3">
-      <div class="col-sm-6 col-lg-3 mb-4">
-        <h3 class="skill-group">Languages</h3>
-        <div class="d-flex flex-wrap gap-2">
-            <span class="skill-badge">Python</span>
-            <span class="skill-badge">Groovy</span>
-            <span class="skill-badge">SQL</span>
-            <span class="skill-badge">JavaScript</span>
-            <span class="skill-badge">HTML / CSS</span>
-            <span class="skill-badge">C#</span>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3 mb-4">
-        <h3 class="skill-group">Databases</h3>
-        <div class="d-flex flex-wrap gap-2">
-            <span class="skill-badge">PostgreSQL</span>
-            <span class="skill-badge">MariaDB</span>
-            <span class="skill-badge">MySQL</span>
-            <span class="skill-badge">MongoDB</span>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3 mb-4">
-        <h3 class="skill-group">Infrastructure &amp; Cloud</h3>
-        <div class="d-flex flex-wrap gap-2">
-            <span class="skill-badge">Linux (cloud &amp; bare-metal)</span>
-            <span class="skill-badge">AWS</span>
-            <span class="skill-badge">GCP</span>
-            <span class="skill-badge">Docker</span>
-        </div>
-      </div>
-      <div class="col-sm-6 col-lg-3 mb-4">
-        <h3 class="skill-group">Monitoring &amp; Tools</h3>
-        <div class="d-flex flex-wrap gap-2">
-            <span class="skill-badge">Grafana</span>
-            <span class="skill-badge">Kibana</span>
-            <span class="skill-badge">Git</span>
-            <span class="skill-badge">Jira</span>
-            <span class="skill-badge">Salesforce</span>
-            <span class="skill-badge">Confluence</span>
-            <span class="skill-badge">JupyterLab</span>
-        </div>
-      </div>
-    </div>
-    <section class="cta">
+  <main class="container page-width">
+    <div class="hero">
       <div>
-        <h2 class="cta-title">Open to new opportunities</h2>
-        <p class="mb-0">Grab a copy of my resume or reach out through the links at the bottom of any page.</p>
+        <h1 class="hero-name">Jacob Morrow</h1>
+        <p class="hero-role">Senior Support Engineer</p>
+
+        <div class="view-switch" role="group" aria-label="How to read this page">
+          <button type="button" data-view-set="plain" aria-pressed="true">Plain English</button>
+          <button type="button" data-view-set="tech" aria-pressed="false">Technical</button>
+        </div>
+
+        <div aria-live="polite">
+          <p class="hero-pitch view-plain">When the pricing software that well-known brands rely on has a problem, I'm the
+            last stop before it reaches the developers. I find out why it happened, fix it or give engineering exactly
+            what they need, and make sure it doesn't happen again.</p>
+          <p class="hero-pitch view-tech">Third-level support for an enterprise SaaS pricing platform. I debug
+            client-configured Groovy logic, track down PostgreSQL and MariaDB performance problems, monitor Linux on
+            AWS, GCP and bare metal, and escalate real defects to engineering with evidence.</p>
+        </div>
+
+        <a class="btn-accent" id="hero-email" href="#" data-u="Morrow98J" data-d="gmail.com">Email me</a>
+        <p class="featured">Featured by Pricefx: <a
+            href="https://www.pricefx.com/content/careers/life-at-pricefx/support-engineer">a day in the life of a
+            Support Engineer</a></p>
       </div>
-      <a href="resume.pdf" download="resumeMorrow" class="btn btn-primary btn-lg">Download Resume</a>
+
+      <figure class="log-figure">
+        <div class="log" role="img"
+          aria-label="Example critical ticket: Q4 price tables down. Database CPU normal but a node was in a restart loop. Logs showed logic timeouts and out-of-memory errors, isolated to customer logic rather than the core product. The logic had no recent changes, pointing to the data. Root cause was a bad data push, which was corrected and re-run. Verified tables loading with no restarts for 15 minutes. Sent the customer the root cause and prevention steps, then updated the knowledge base and shared it with the team.">
+          <div class="log-bar"><span>critical ticket</span><span>resolved</span></div>
+          <ol>
+            <li><span class="t">09:02</span><span class="k-alert">ticket</span><span>critical: q4 price tables down</span></li>
+            <li><span class="t">09:06</span><span class="k-look">check</span><span>db cpu nominal; node restart loop</span></li>
+            <li><span class="t">09:14</span><span class="k-look">trace</span><span>logic timeouts, oom found in logs</span></li>
+            <li><span class="t">09:22</span><span class="k-look">scope</span><span>isolated to customer logic, not core</span></li>
+            <li><span class="t">09:30</span><span class="k-look">check</span><span>logic unchanged; suspect data</span></li>
+            <li><span class="t">09:51</span><span class="k-fix">fix</span><span>bad data push; corrected, re-ran</span></li>
+            <li><span class="t">10:12</span><span class="k-done">verify</span><span>tables loading, no restarts 15m</span></li>
+            <li><span class="t">10:25</span><span class="k-fix">ticket</span><span>rca + prevention sent to customer</span></li>
+            <li><span class="t">11:10</span><span class="k-done">docs</span><span>kb updated, shared with team</span></li>
+          </ol>
+        </div>
+        <figcaption class="log-caption">How I work a critical ticket during an on-call week: an illustrative example.</figcaption>
+      </figure>
+    </div>
+
+    <section class="home-section">
+      <h2 class="home-heading">At a glance</h2>
+      <dl class="facts">
+        <dt>Experience</dt>
+        <dd><span class="view-plain">5+ years helping companies get the most out of complex business software.</span><span
+            class="view-tech">5+ years in SaaS support engineering across Pricefx, Wayvia and Hummingbot.</span></dd>
+        <dt>Leadership</dt>
+        <dd><span class="view-plain">Leads the US support team when the manager is out, and trains new engineers as they
+            join.</span><span class="view-tech">Acting US Support Team lead; owns onboarding, mentorship and Confluence
+            documentation.</span></dd>
+        <dt>Problem solving</dt>
+        <dd><span class="view-plain">Fixes problems at the source, so fewer issues need to go to the developers.</span><span
+            class="view-tech">Root-cause analysis on client configuration errors, reducing escalations in Salesforce and
+            Jira.</span></dd>
+        <dt>On call</dt>
+        <dd><span class="view-plain">Takes week-long on-call shifts, answering the most urgent problems within
+            hours.</span><span class="view-tech">US on-call rotation: alert monitoring and critical-severity tickets within
+            hours; triage across four severity levels against SLAs.</span></dd>
+        <dt>Launches</dt>
+        <dd><span class="view-plain">Supports clients closely right after they go live, so the rollout goes
+            smoothly.</span><span class="view-tech">Post-go-live hypercare for client implementations and their
+            partners.</span></dd>
+      </dl>
     </section>
 
-    <p class="text-muted small">This site is built with HTML, CSS, JavaScript and Bootstrap, hosted on GitHub Pages.</p>
+    <section class="home-section">
+      <h2 class="home-heading">Where I've worked</h2>
+      <div class="job">
+        <div class="job-when">2022 to now</div>
+        <div>
+          <h3 class="job-title">Senior Support Engineer <span>at Pricefx</span></h3>
+          <p class="view-plain">The final line of support for enterprise customers. I solve the hardest customer problems,
+            cover urgent issues during on-call weeks, and lead the US team when needed.</p>
+          <p class="view-tech">Third-level support. Debug client pricing logic in Groovy, investigate PostgreSQL and
+            MariaDB performance, take US on-call weeks for critical alerts, and act as US team lead when needed.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-when">2021 to 2022</div>
+        <div>
+          <h3 class="job-title">Support Engineer <span>at Wayvia</span></h3>
+          <p class="view-plain">Fixed website and data problems for clients within agreed response times, and updated
+            client sites to match new branding.</p>
+          <p class="view-tech">Resolved front-end and data integration issues across JavaScript, C#, MySQL and MongoDB
+            within strict SLAs.</p>
+        </div>
+      </div>
+      <div class="job">
+        <div class="job-when">2021</div>
+        <div>
+          <h3 class="job-title">Software Support Analyst <span>at Hummingbot</span></h3>
+          <p class="view-plain">Tested automated trading software and improved the reports used to analyze it.</p>
+          <p class="view-tech">Deployed and tested trading bots with Docker and improved Python analytics notebooks.</p>
+        </div>
+      </div>
+      <p class="more-link"><a href="experience.html">Full experience and education</a></p>
+    </section>
+
+    <section class="home-section">
+      <h2 class="home-heading">What I work with</h2>
+      <div class="stack">
+        <div><h3>Languages</h3><p>Python, Groovy, SQL, JavaScript, C#</p></div>
+        <div><h3>Databases</h3><p>PostgreSQL, MariaDB, MySQL, MongoDB</p></div>
+        <div><h3>Infrastructure</h3><p>Linux, AWS, GCP, Docker</p></div>
+        <div><h3>Observability and teams</h3><p>Grafana, Kibana, Jira, Salesforce, Confluence</p></div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
