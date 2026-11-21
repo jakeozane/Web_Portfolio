@@ -1,19 +1,142 @@
-/* Nord palette */
+/* ==========================================================================
+   Theme tokens: Nord palette (https://www.nordtheme.com)
+   Light mode uses Snow Storm surfaces; dark mode uses Polar Night.
+   Components only use the semantic tokens below, never raw palette values.
+   ========================================================================== */
 :root {
+  /* Nord palette */
   --nord0: #2e3440;
+  --nord1: #3b4252;
+  --nord2: #434c5e;
   --nord3: #4c566a;
   --nord4: #d8dee9;
+  --nord5: #e5e9f0;
   --nord6: #eceff4;
   --nord8: #88c0d0;
+  --nord9: #81a1c1;
   --nord10: #5e81ac;
+
+  /* Light theme (default) */
+  --bg: #ffffff;
+  --surface: var(--nord6);
+  --border: var(--nord4);
+  --text: var(--nord0);
+  --text-muted: var(--nord3);
+  --accent: var(--nord10);
+  --cta-edge: var(--nord8);
+  color-scheme: light;
 }
 
+[data-theme="dark"] {
+  --bg: var(--nord0);
+  --surface: var(--nord1);
+  --border: var(--nord3);
+  --text: var(--nord6);
+  --text-muted: var(--nord4);
+  --accent: var(--nord8);
+  --cta-edge: var(--nord8);
+  color-scheme: dark;
+}
+
+/* ---- Base --------------------------------------------------------------- */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  /* Keep the footer at the bottom of short pages */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+h1, h2, h3 {
+  color: var(--text);
+}
+
+/* Layout: one consistent, readable width for header, content and footer */
+.page-width {
+  max-width: 960px;
+}
+
+/* ---- Header ------------------------------------------------------------- */
+.site-header {
+  background-color: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header .navbar-brand,
+.site-header .navbar-brand:hover {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.site-header .nav-link {
+  color: var(--text-muted);
+}
+
+.site-header .nav-link:hover,
+.site-header .nav-link:focus {
+  color: var(--text);
+}
+
+.site-header .nav-link.active {
+  color: var(--accent) !important;
+  font-weight: 600;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+}
+
+.theme-toggle:hover {
+  background-color: var(--bg);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Show the moon in light mode (switch to dark), the sun in dark mode */
+.theme-toggle .icon-sun,
+[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+/* ---- Sections ----------------------------------------------------------- */
 .intro {
   margin-bottom: 2rem;
 }
 
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
 .skill-group {
-  color: var(--nord3);
+  color: var(--text-muted);
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
@@ -22,30 +145,10 @@
   display: inline-block;
   padding: 0.35rem 0.75rem;
   border-radius: 1rem;
-  background-color: var(--nord6);
-  border: 1px solid var(--nord4);
-  color: var(--nord0);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
   font-size: 0.9rem;
-}
-
-.site-footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: 1.5rem 1rem;
-  margin-top: 2rem;
-  border-top: 1px solid var(--nord4);
-  color: var(--nord3);
-}
-
-.site-footer a {
-  color: var(--nord10);
-  text-decoration: none;
-}
-
-.site-footer a:hover {
-  text-decoration: underline;
 }
 
 .cta {
@@ -57,38 +160,9 @@
   padding: 1.5rem;
   margin: 1rem 0 1.5rem;
   border-radius: 0.5rem;
-  background-color: var(--nord6);
-  border-left: 4px solid var(--nord8);
-  color: var(--nord0);
-}
-
-/* Layout: one consistent, readable width for header, content and footer */
-.page-width {
-  max-width: 960px;
-}
-
-body {
-  color: var(--nord0);
-}
-
-h1, h2, h3 {
-  color: var(--nord0);
-}
-
-.site-header {
-  background-color: var(--nord6);
-  border-bottom: 1px solid var(--nord4);
-}
-
-.site-header .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: var(--nord0);
-}
-
-.site-header .nav-link.active {
-  color: var(--nord10) !important;
-  font-weight: 600;
+  background-color: var(--surface);
+  border-left: 4px solid var(--cta-edge);
+  color: var(--text);
 }
 
 .cta-title {
@@ -97,18 +171,7 @@ h1, h2, h3 {
   margin-bottom: 0.25rem;
 }
 
-.section-title {
-  font-size: 1.75rem;
-  font-weight: 300;
-  margin: 1.5rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--nord4);
-}
-
-.skill-group {
-  font-size: 1.1rem;
-}
-
+/* ---- Experience & projects ---------------------------------------------- */
 .role,
 .project {
   margin-bottom: 2rem;
@@ -129,12 +192,12 @@ h1, h2, h3 {
   margin: 0;
 }
 
-.role-org {
-  color: var(--nord3);
+.role-org,
+.role-dates {
+  color: var(--text-muted);
 }
 
 .role-dates {
-  color: var(--nord3);
   font-size: 0.95rem;
   white-space: nowrap;
 }
@@ -148,23 +211,63 @@ h1, h2, h3 {
 }
 
 .project-link {
-  color: var(--nord10);
+  color: var(--accent);
   text-decoration: none;
   white-space: nowrap;
 }
 
 .profile-photo {
-  border: 1px solid var(--nord4);
+  border: 1px solid var(--border);
 }
 
-/* Keep the footer at the bottom of short pages */
-body {
-  min-height: 100vh;
+/* ---- Footer ------------------------------------------------------------- */
+.site-footer {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: var(--text-muted);
 }
 
-body > main {
-  flex: 1 0 auto;
-  width: 100%;
+.site-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.site-footer a:hover,
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* ---- Bootstrap pieces that need help in dark mode ----------------------- */
+[data-theme="dark"] .text-muted {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .navbar-toggler {
+  border-color: var(--border);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .btn-primary {
+  background-color: var(--nord8);
+  border-color: var(--nord8);
+  color: var(--nord0);
+}
+
+[data-theme="dark"] .btn-primary:hover,
+[data-theme="dark"] .btn-primary:focus {
+  background-color: var(--nord9);
+  border-color: var(--nord9);
+  color: var(--nord0);
+}
+
+[data-theme="dark"] .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem var(--nord3);
 }
