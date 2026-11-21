@@ -1,7 +1,3 @@
-h1 {
-  padding-left: 1rem;
-}
-
 /* Nord palette */
 :root {
   --nord0: #2e3440;
@@ -64,4 +60,111 @@ h1 {
   background-color: var(--nord6);
   border-left: 4px solid var(--nord8);
   color: var(--nord0);
+}
+
+/* Layout: one consistent, readable width for header, content and footer */
+.page-width {
+  max-width: 960px;
+}
+
+body {
+  color: var(--nord0);
+}
+
+h1, h2, h3 {
+  color: var(--nord0);
+}
+
+.site-header {
+  background-color: var(--nord6);
+  border-bottom: 1px solid var(--nord4);
+}
+
+.site-header .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--nord0);
+}
+
+.site-header .nav-link.active {
+  color: var(--nord10) !important;
+  font-weight: 600;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 300;
+  margin: 1.5rem 0 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--nord4);
+}
+
+.skill-group {
+  font-size: 1.1rem;
+}
+
+.role,
+.project {
+  margin-bottom: 2rem;
+}
+
+.role-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.role-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.role-org {
+  color: var(--nord3);
+}
+
+.role-dates {
+  color: var(--nord3);
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.role ul {
+  padding-left: 1.25rem;
+}
+
+.role li {
+  margin-bottom: 0.35rem;
+}
+
+.project-link {
+  color: var(--nord10);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.profile-photo {
+  border: 1px solid var(--nord4);
+}
+
+/* Keep the footer at the bottom of short pages */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body > main {
+  flex: 1 0 auto;
+  width: 100%;
 }

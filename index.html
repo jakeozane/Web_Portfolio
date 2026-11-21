@@ -15,48 +15,38 @@
 </head>
 
 <body>
-  <h1 class="display-1">Jacob Morrow</h1>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#"></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <!--add home navigation link-->
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home</a>
-        </li>
-        <!--add projects navigation link-->
-        <li class="nav-item">
-          <a class="nav-link" href="projects.html">Projects</a>
-        </li>
-        <!--add experience navigation link-->
-        <li class="nav-item">
-          <a class="nav-link" href="experience.html">Experience</a>
-        </li>
-        <!--add about me navigation link-->
-        <li class="nav-item">
-          <a class="nav-link" href="aboutMe.html">About Me</a>
-        </li>
-      </ul>
-    </div>
-  </nav>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-light">
+      <div class="container page-width">
+        <a class="navbar-brand" href="index.html">Jacob Morrow</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutMe.html">About Me</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-  <div class="container my-4">
+  <main class="container page-width py-4">
     <section class="intro">
-      <h2 class="display-6">Senior Support Engineer</h2>
+      <h1 class="hero-title">Senior Support Engineer</h1>
       <p class="lead">5+ years troubleshooting enterprise SaaS platforms: debugging client-configured logic,
         resolving relational database issues, and keeping cloud and bare-metal Linux production environments
         reliable. I partner closely with engineering teams and mentor the engineers around me.</p>
     </section>
 
-    <hr />
-    <h4 class="display-9">Skills</h4>
+    <h2 class="section-title">Skills</h2>
     <div class="row mt-3">
-      <div class="col-md-6 col-lg-3 mb-4">
-        <h5 class="skill-group">Languages</h5>
+      <div class="col-sm-6 col-lg-3 mb-4">
+        <h3 class="skill-group">Languages</h3>
         <div class="d-flex flex-wrap gap-2">
             <span class="skill-badge">Python</span>
             <span class="skill-badge">Groovy</span>
@@ -66,8 +56,8 @@
             <span class="skill-badge">C#</span>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <h5 class="skill-group">Databases</h5>
+      <div class="col-sm-6 col-lg-3 mb-4">
+        <h3 class="skill-group">Databases</h3>
         <div class="d-flex flex-wrap gap-2">
             <span class="skill-badge">PostgreSQL</span>
             <span class="skill-badge">MariaDB</span>
@@ -75,8 +65,8 @@
             <span class="skill-badge">MongoDB</span>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <h5 class="skill-group">Infrastructure &amp; Cloud</h5>
+      <div class="col-sm-6 col-lg-3 mb-4">
+        <h3 class="skill-group">Infrastructure &amp; Cloud</h3>
         <div class="d-flex flex-wrap gap-2">
             <span class="skill-badge">Linux (cloud &amp; bare-metal)</span>
             <span class="skill-badge">AWS</span>
@@ -84,8 +74,8 @@
             <span class="skill-badge">Docker</span>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 mb-4">
-        <h5 class="skill-group">Monitoring &amp; Tools</h5>
+      <div class="col-sm-6 col-lg-3 mb-4">
+        <h3 class="skill-group">Monitoring &amp; Tools</h3>
         <div class="d-flex flex-wrap gap-2">
             <span class="skill-badge">Grafana</span>
             <span class="skill-badge">Kibana</span>
@@ -106,7 +96,7 @@
     </section>
 
     <p class="text-muted small">This site is built with HTML, CSS, JavaScript and Bootstrap, hosted on GitHub Pages.</p>
-  </div>
+  </main>
 
   <footer class="site-footer">
     <a id="contact-email" href="#" data-u="Morrow98J" data-d="gmail.com">Morrow98J [at] gmail [dot] com</a>
@@ -116,21 +106,9 @@
     <a href="resume.pdf" download="resumeMorrow">Resume (PDF)</a>
   </footer>
 
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-  </script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-  </script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
-
   <script src="footer.js"></script>
 </body>
 
